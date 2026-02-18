@@ -1,4 +1,4 @@
-## live web app -(https://job-portal-git-main-segnis-projects-c47aed0b.vercel.app/)
+
 ## 🚀 HireHub – AI-Powered Job Portal
 
 HireHub is a modern, AI-enhanced job marketplace built with React, Vite, TypeScript, and Google Gemini AI. It streamlines the hiring lifecycle — from job discovery and applications to employer screening and onboarding.
@@ -126,6 +126,8 @@ Context-aware hiring and career assistant powered by Gemini.
 - Scalable frontend structure
 - Ready for backend integration
 - Production-level organization
+
+  # live web app -(https://job-portal-git-main-segnis-projects-c47aed0b.vercel.app/)
 
 ## 👨‍💻 Author
 Built with passion by Segni Nadew — Frontend & Full-Stack Developer

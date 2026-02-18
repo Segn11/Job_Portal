@@ -1,5 +1,4 @@
-## live web app - https://vercel.com/new/segnis-projects-c47aed0b/success?developer-id=&external-id=&redirect-url=&branch=main&deploymentUrl=job-portal-1jib6uqx5-segnis-projects-c47aed0b.vercel.app&projectName=job-portal&s=https%3A%2F%2Fgithub.com%2FSegn11%2FJob_Portal&gitOrgLimit=&hasTrialAvailable=1&totalProjects=1&flow-id=QXYSKcvyFSKxcIHuzEzHO
-
+## live web app -(https://job-portal-git-main-segnis-projects-c47aed0b.vercel.app/)
 ## 🚀 HireHub – AI-Powered Job Portal
 
 HireHub is a modern, AI-enhanced job marketplace built with React, Vite, TypeScript, and Google Gemini AI. It streamlines the hiring lifecycle — from job discovery and applications to employer screening and onboarding.

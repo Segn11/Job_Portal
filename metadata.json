@@ -1,0 +1,7 @@
+{
+  "name": "HireHub - Job Portal System",
+  "description": "A comprehensive job portal system for job seekers, employers, and administrators featuring role-based dashboards, job management, and application tracking.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

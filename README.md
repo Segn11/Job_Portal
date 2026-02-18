@@ -1,197 +1,132 @@
-🚀 HireHub – AI-Powered Job Portal
 
-HireHub is a modern, AI-enhanced job marketplace built with React, Vite, TypeScript, and Google Gemini AI.
-It streamlines the hiring lifecycle — from job discovery and applications to employer screening and onboarding.
 
-🌟 Overview
+## 🚀 HireHub – AI-Powered Job Portal
 
+HireHub is a modern, AI-enhanced job marketplace built with React, Vite, TypeScript, and Google Gemini AI. It streamlines the hiring lifecycle — from job discovery and applications to employer screening and onboarding.
+
+## 🌟 Overview
 HireHub is designed to deliver a seamless hiring experience for:
 
-👩‍💼 Job Seekers
-
-🏢 Employers
-
-🛠️ Administrators
+- 👩‍💼 Job Seekers
+- 🏢 Employers
+- 🛠️ Administrators
 
 The platform combines a responsive UI architecture with an intelligent AI assistant to improve productivity and engagement across all user roles.
 
-✨ Key Features
-🔐 Role-Based Dashboards
-
+## ✨ Key Features
+### 🔐 Role-Based Dashboards
 Each user type lands on a personalized dashboard:
 
-Job Seekers → Browse jobs, manage applications, track progress
+- **Job Seekers** → Browse jobs, manage applications, track progress
+- **Employers** → Post jobs, review applicants, manage listings
+- **Admins** → Platform analytics and oversight tools
 
-Employers → Post jobs, review applicants, manage listings
+All routes live under the `pages/` directory and are orchestrated through `react-router-dom` for smooth navigation.
 
-Admins → Platform analytics and oversight tools
+### 🔎 Advanced Job Browsing
 
-All routes are structured under the pages/ directory and managed using react-router-dom.
+- Searchable job listings
+- Detailed job description pages
+- Company profiles
+- Pricing tiers
+- Reusable UI primitives in `components/ui/`
 
-🔎 Advanced Job Browsing
+### 🧠 AI Hiring Assistant (Google Gemini)
+HireHub ships with a floating AI chatbot backed by `gemini-3-flash-preview` that:
 
-Searchable job listings
+- Guides seekers with resume tips, career coaching, interview prep, and skill recommendations
+- Helps employers generate descriptions, screen candidates, and orchestrate workflows
+- Maintains contextual conversation state, role-aware instructions, and graceful failure handling with error logging
 
-Detailed job description pages
+### 🛡️ Secure Authentication System
+`AuthContext` manages:
 
-Company profiles
+- Authentication tokens
+- Persistent session state via `localStorage`
+- `login`, `logout`, and `updateUser` helpers
+- Real-time UI updates when the auth state changes
 
-Pricing tiers
+### 🎨 Modern Layout Architecture
 
-Reusable UI components in components/ui/
+- `PublicLayout` anchors the marketing and public-facing sections
+- `DashboardLayout` keeps authenticated experiences consistent
+- Responsive design, utility-first styling, and scalable component structure
 
-🧠 AI Hiring Assistant (Google Gemini)
+## 🏗️ Tech Stack
+| Layer | Technology |
+| --- | --- |
+| Frontend | React + Vite + TypeScript |
+| Styling | Tailwind-style utility classes |
+| AI Engine | Google Gemini (`@google/genai`) |
+| Routing | `react-router-dom` |
+| API Structure | Centralized service layer (`services/api.ts`) |
 
-HireHub includes a floating AI chatbot powered by Google Gemini (gemini-3-flash-preview).
-
-💡 For Job Seekers:
-
-Resume guidance
-
-Career coaching
-
-Interview preparation
-
-Skill recommendations
-
-💡 For Employers:
-
-Job description generation
-
-Screening question suggestions
-
-Hiring workflow assistance
-
-The chatbot:
-
-Maintains contextual conversation state
-
-Injects role-aware system instructions
-
-Gracefully handles API failures
-
-Logs errors for debugging
-
-🛡️ Secure Authentication System
-
-AuthContext manages:
-
-Authentication tokens
-
-Persistent session state via localStorage
-
-login, logout, and updateUser helpers
-
-Real-time UI updates on auth state changes
-
-🎨 Modern Layout Architecture
-
-PublicLayout → Marketing & public pages
-
-DashboardLayout → Authenticated user experience
-
-Fully responsive
-
-Clean utility-based styling
-
-Scalable component structure
-
-🏗️ Tech Stack
-Layer	Technology
-Frontend	React + Vite + TypeScript
-Styling	Tailwind-style utility classes
-AI Engine	Google Gemini (@google/genai)
-Routing	react-router-dom
-API Structure	Centralized service layer (services/api.ts)
-📂 Project Structure
-src/
- ├── components/
- │    ├── ui/
- │    └── AIChatbot.tsx
- ├── context/
- │    └── AuthContext.tsx
- ├── layouts/
- │    ├── DashboardLayout.tsx
- │    └── PublicLayout.tsx
- ├── pages/
- │    ├── Jobs.tsx
- │    ├── Dashboard.tsx
- │    ├── MyApplications.tsx
- │    └── ...
- └── services/
-      └── api.ts
-
-⚙️ Running Locally
-1️⃣ Clone Repository
-git clone <your-repo-url>
-cd hirehub
-
-2️⃣ Install Dependencies
-npm install
-
-3️⃣ Setup Environment Variables
-
-Create .env.local:
-
-VITE_GOOGLE_GENAI_API_KEY=your_api_key_here
+## 📂 Project Structure (`src/`)
+- `components/`
+  - `ui/`
+  - `AIChatbot.tsx`
+- `context/`
+  - `AuthContext.tsx`
+- `layouts/`
+  - `DashboardLayout.tsx`
+  - `PublicLayout.tsx`
+- `pages/`
+  - `Jobs.tsx`, `Dashboard.tsx`, `MyApplications.tsx`, etc.
 
 
-⚠️ Never commit sensitive keys to version control.
+## ⚙️ Running Locally
+1. **Clone Repository**
+   ```bash
+   git clone <your-repo-url>
+   cd hirehub
+   ```
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+3. **Setup Environment Variables**
+   Create `.env.local` with:
+   ```env
+   VITE_GOOGLE_GENAI_API_KEY=your_api_key_here
+   ```
+   ⚠️ Never commit sensitive keys to version control.
+4. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+   The app will run at `http://localhost:3000/` with the AI assistant powered by Gemini.
 
-4️⃣ Start Development Server
-npm run dev
-
-
-App runs at:
-
-http://localhost:3000/
-
-🚀 Production Build
+## 🚀 Production Build
+```bash
 npm run build
+```
+Deploy the generated `dist/` folder to any static hosting provider such as Vercel, Netlify, Firebase Hosting, or XAMPP/Apache if you prefer PHP.
 
-
-Deploy the generated dist/ folder to:
-
-Vercel
-
-Netlify
-
-Firebase Hosting
-
-Or any static hosting provider
-
-📸 Screenshots
-🏠 Homepage
-
+## 📸 Screenshots
+### 🏠 Homepage
 Job feed with featured listings and intuitive navigation.
 
-🤖 AI Assistant
+![Homepage](photo/Screenshot%202026-02-18%20144617.png)
 
+### 🤖 AI Assistant
 Context-aware hiring and career assistant powered by Gemini.
 
-🔮 Future Improvements
+![AI Assistant](photo/Screenshot%202026-02-18%20145925.png)
 
-Backend integration (Node / Django / Laravel)
+## 🔮 Future Improvements
+- Backend integration (Node / Django / Laravel)
+- Resume upload & parsing engine
+- Payment gateway / monetization flows
+- Real-time notifications and alerts
+- Advanced analytics dashboard
+- Role-based access control (RBAC)
 
-Resume upload & parsing
+## 🎯 Why HireHub?
+- Clean architecture
+- AI-powered productivity
+- Scalable frontend structure
+- Ready for backend integration
+- Production-level organization
 
-Payment gateway integration
-
-Real-time notifications
-
-Advanced analytics dashboard
-
-Role-based access control (RBAC)
-
-🎯 Why HireHub?
-
-✔ Clean architecture
-✔ AI-powered productivity
-✔ Scalable frontend structure
-✔ Ready for backend integration
-✔ Production-level organization
-
-👨‍💻 Author
-
-Built with passion by Segni Nadew
-Frontend & Full-Stack Developer
+## 👨‍💻 Author
+Built with passion by Segni Nadew — Frontend & Full-Stack Developer
